@@ -1,0 +1,8 @@
+{
+  "metrics": [
+    {
+      "name": "monthly_revenue_by_geo",
+      "definition": "Sum of order total_amount grouped by month and user geography"
+    }
+  ]
+}

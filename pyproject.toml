@@ -1,9 +1,14 @@
 [project]
-name = "resume-optimizer"
+name = "modlr-agent"
 version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
+    "dotenv>=0.9.9",
+    "ipython>=9.5.0",
+    "langchain>=0.3.27",
+    "langchain-core>=0.3.76",
+    "langchain-google-genai>=2.1.11",
     "langgraph>=1.0.0a3",
 ]

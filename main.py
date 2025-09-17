@@ -1,5 +1,5 @@
 def main():
-    print("Hello from resume-optimizer!")
+    print("Hello from modlr-agent!")
 
 
 if __name__ == "__main__":

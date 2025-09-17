@@ -1,0 +1,22 @@
+
+  {
+    "tables": [
+    {
+      "name": "orders",
+      "columns": {
+        "order_id": "int",
+        "user_id": "int",
+        "order_date": "date",
+        "total_amount": "float"
+      }
+    },
+    {
+      "name": "users",
+      "columns": {
+        "user_id": "int",
+        "signup_date": "date",
+        "geo": "string"
+      }
+    }
+  ]
+}
