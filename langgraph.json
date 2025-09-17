@@ -1,0 +1,21 @@
+{
+  "dependencies": [
+    "."
+  ],
+  "graphs": {
+    "modlr_agent": "./src/search_flow.py:agent"
+  },
+  "env": ".env",
+  "checkpointer": {
+    "class": "langgraph.checkpoint.sqlite.SqliteSaver",
+    "config": {
+      "path": "./checkpoints/checkpoints.db"
+    }
+  },
+  "store": {
+    "class": "langgraph.store.memory.InMemoryStore",
+    "config": {
+      "path": "./checkpoints/store"
+    }
+  }
+}
