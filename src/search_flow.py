@@ -7,14 +7,14 @@ from IPython.display import Image, display
 import operator
 from dotenv import load_dotenv
 import json
-from schemas import RawDataSpecs, MetricsSpecs
+from schemas import RawSchemaSpecs, MetricsSpecs
 
 load_dotenv(override=True)
 
 def load_model(model_name: str):
     with open(f"models/{model_name}/inputs/schema.json", "r") as f:
         schema_data = json.load(f)
-        schema = RawDataSpecs(**schema_data)
+        schema = RawSchemaSpecs(**schema_data)
     with open(f"models/{model_name}/inputs/metrics.json", "r") as f:
         metrics_data = json.load(f)
         metrics = MetricsSpecs(**metrics_data)
@@ -73,7 +73,7 @@ agent_builder.add_edge("llm_call", END)
 agent = agent_builder.compile()
 
 # Invoke
-messages = [HumanMessage(content="Test the tool with input 'Hello World'")]
+messages = [HumanMessage(content="Provide the dimensional model for this data.")]
 messages = agent.invoke({"messages": messages})
 for m in messages["messages"]:
     m.pretty_print()

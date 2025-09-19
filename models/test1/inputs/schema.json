@@ -3,6 +3,8 @@
     "tables": [
     {
       "name": "orders",
+      "type": "raw",
+      "description": "Table containing order information",
       "columns": {
         "order_id": "int",
         "user_id": "int",
@@ -12,10 +14,12 @@
     },
     {
       "name": "users",
+      "type": "raw",
+      "description": "Table containing user information",
       "columns": {
         "user_id": "int",
         "signup_date": "date",
-        "geo": "string"
+        "geo": "str"
       }
     }
   ]
